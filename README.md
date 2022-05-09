@@ -1,15 +1,15 @@
 # Slam_using_rplidar
 
 ## lidar port check
-'''bash
+```bash
 ls /dev/ttyUSB* 
-'''
+```
 ## give port permission
-'''bash
+```bash
 sudo chmod 666 /dev/ttyUSB0
-'''
+```
 
 ## view lidar sensor value using rviz
-'''bash
+```bash
 roslaunch rplidar_ros view_rplidar.launch
-'''
+```
