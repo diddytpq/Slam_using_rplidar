@@ -1,0 +1,8 @@
+prefix=/home/yoseph/worckspace/Slam_using_rplidar/devel
+
+Name: rplidar_slam
+Description: Description of rplidar_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
