@@ -133,6 +133,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/yoseph/worckspace/Slam_using_rplidar/build/gtest/cmake_install.cmake")
   include("/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_ros/cmake_install.cmake")
   include("/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_slam/cmake_install.cmake")
+  include("/home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_bringup/cmake_install.cmake")
+  include("/home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_gazebo/cmake_install.cmake")
+  include("/home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_slam/cmake_install.cmake")
+  include("/home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_teleop/cmake_install.cmake")
+  include("/home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_description/cmake_install.cmake")
 
 endif()
 

@@ -7,3 +7,8 @@
 subdirs("gtest")
 subdirs("rplidar_ros")
 subdirs("rplidar_slam")
+subdirs("turtlebot3_example/turtlebot3_bringup")
+subdirs("turtlebot3_example/turtlebot3_gazebo")
+subdirs("turtlebot3_example/turtlebot3_slam")
+subdirs("turtlebot3_example/turtlebot3_teleop")
+subdirs("turtlebot3_example/turtlebot3_description")
