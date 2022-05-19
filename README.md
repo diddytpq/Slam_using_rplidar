@@ -20,6 +20,11 @@ roslaunch rplidar_ros view_rplidar.launch
 roslaunch rplidar_slam rplidar_gmapping.launch
 ```
 
+## Rplidar slam using gmapping on real robot
+```bash
+roslaunch rplidar_slam test.launch
+```
+
 ## Rplidar slam using gmapping in gazebo
 ```bash
 roslaunch rplidar_slam rplidar_gazebo_env.launch
