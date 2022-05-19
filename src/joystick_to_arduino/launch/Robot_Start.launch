@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="joy" type="joy_node" name="joystick_raw"  output="screen"/>
+  <node pkg="joystick_to_arduino" type="joy_to_cmd.py" name="joy_to_cmds"/>
+  <!-- <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega"/> -->
+</launch>

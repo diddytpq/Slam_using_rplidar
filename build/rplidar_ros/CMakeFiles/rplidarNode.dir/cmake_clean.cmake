@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/yoseph/worckspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNode"
-  "/home/yoseph/worckspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNode.pdb"
+  "CMakeFiles/rplidarNode.dir/src/node.cpp.o"
   "CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
   "CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o"
   "CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o"
   "CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o"
   "CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o"
-  "CMakeFiles/rplidarNode.dir/src/node.cpp.o"
+  "/home/yy/workspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNode.pdb"
+  "/home/yy/workspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNode"
 )
 
 # Per-language clean rules from dependency scanning.

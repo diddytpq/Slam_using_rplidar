@@ -19,10 +19,6 @@ roslaunch rplidar_ros view_rplidar.launch
 ```bash
 roslaunch rplidar_slam rplidar_gmapping.launch
 ```
-## Rplidar slam using gmapping
-```bash
-roslaunch rplidar_slam rplidar_gmapping.launch
-```
 
 ## Rplidar slam using gmapping in gazebo
 ```bash

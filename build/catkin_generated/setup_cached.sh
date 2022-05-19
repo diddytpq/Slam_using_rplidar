@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/yoseph/worckspace/Slam_using_rplidar/build'
+export PWD='/home/yy/workspace/Slam_using_rplidar/build'

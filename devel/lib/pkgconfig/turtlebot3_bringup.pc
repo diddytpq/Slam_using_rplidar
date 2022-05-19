@@ -1,4 +1,4 @@
-prefix=/home/yoseph/worckspace/Slam_using_rplidar/devel
+prefix=/home/yy/workspace/Slam_using_rplidar/devel
 
 Name: turtlebot3_bringup
 Description: Description of turtlebot3_bringup

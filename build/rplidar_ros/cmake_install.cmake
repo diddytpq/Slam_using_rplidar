@@ -1,8 +1,8 @@
-# Install script for directory: /home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_ros
+# Install script for directory: /home/yy/workspace/Slam_using_rplidar/src/rplidar_ros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yoseph/worckspace/Slam_using_rplidar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yy/workspace/Slam_using_rplidar/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_ros/catkin_generated/installspace/rplidar_ros.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yy/workspace/Slam_using_rplidar/build/rplidar_ros/catkin_generated/installspace/rplidar_ros.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros/cmake" TYPE FILE FILES
-    "/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig.cmake"
-    "/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig-version.cmake"
+    "/home/yy/workspace/Slam_using_rplidar/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig.cmake"
+    "/home/yy/workspace/Slam_using_rplidar/build/rplidar_ros/catkin_generated/installspace/rplidar_rosConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_ros/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros" TYPE FILE FILES "/home/yy/workspace/Slam_using_rplidar/src/rplidar_ros/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/yoseph/worckspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNode")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/yy/workspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNode")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNode")
@@ -79,12 +79,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/yoseph/worckspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNodeClient")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros" TYPE EXECUTABLE FILES "/home/yy/workspace/Slam_using_rplidar/devel/lib/rplidar_ros/rplidarNodeClient")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rplidar_ros/rplidarNodeClient")
@@ -94,9 +94,9 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_ros" TYPE DIRECTORY FILES
-    "/home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_ros/launch"
-    "/home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_ros/rviz"
-    "/home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_ros/sdk"
+    "/home/yy/workspace/Slam_using_rplidar/src/rplidar_ros/launch"
+    "/home/yy/workspace/Slam_using_rplidar/src/rplidar_ros/rviz"
+    "/home/yy/workspace/Slam_using_rplidar/src/rplidar_ros/sdk"
     USE_SOURCE_PERMISSIONS)
 endif()
 

@@ -1,0 +1,8 @@
+prefix=/home/yy/workspace/Slam_using_rplidar/install
+
+Name: joystick_to_arduino
+Description: Description of joystick_to_arduino
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
