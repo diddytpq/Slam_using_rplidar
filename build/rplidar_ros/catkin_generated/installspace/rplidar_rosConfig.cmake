@@ -67,14 +67,14 @@ set(rplidar_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rplidar_ros_SOURCE_PREFIX /home/yy/workspace/Slam_using_rplidar/src/rplidar_ros)
-  set(rplidar_ros_DEVEL_PREFIX /home/yy/workspace/Slam_using_rplidar/devel)
+  set(rplidar_ros_SOURCE_PREFIX /home/yang/workspace/Slam_using_rplidar/src/rplidar_ros)
+  set(rplidar_ros_DEVEL_PREFIX /home/yang/workspace/Slam_using_rplidar/devel)
   set(rplidar_ros_INSTALL_PREFIX "")
   set(rplidar_ros_PREFIX ${rplidar_ros_DEVEL_PREFIX})
 else()
   set(rplidar_ros_SOURCE_PREFIX "")
   set(rplidar_ros_DEVEL_PREFIX "")
-  set(rplidar_ros_INSTALL_PREFIX /home/yy/workspace/Slam_using_rplidar/install)
+  set(rplidar_ros_INSTALL_PREFIX /home/yang/workspace/Slam_using_rplidar/install)
   set(rplidar_ros_PREFIX ${rplidar_ros_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yy/workspace/Slam_using_rplidar/install/lib;/home/yy/workspace/Slam_using_rplidar/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/yang/workspace/Slam_using_rplidar/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(rplidar_ros_LIBRARIES ${rplidar_ros_LIBRARIES})
 
   _list_append_unique(rplidar_ros_LIBRARY_DIRS ${${rplidar_ros_dep}_LIBRARY_DIRS})
-  list(APPEND rplidar_ros_EXPORTED_TARGETS ${${rplidar_ros_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(rplidar_ros_EXPORTED_TARGETS ${${rplidar_ros_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")
