@@ -67,14 +67,14 @@ set(turtlebot3_fake_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(turtlebot3_fake_SOURCE_PREFIX /home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake)
-  set(turtlebot3_fake_DEVEL_PREFIX /home/yang/workspace/Slam_using_rplidar/devel)
+  set(turtlebot3_fake_SOURCE_PREFIX /home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake)
+  set(turtlebot3_fake_DEVEL_PREFIX /home/yy/workspace/Slam_using_rplidar/devel)
   set(turtlebot3_fake_INSTALL_PREFIX "")
   set(turtlebot3_fake_PREFIX ${turtlebot3_fake_DEVEL_PREFIX})
 else()
   set(turtlebot3_fake_SOURCE_PREFIX "")
   set(turtlebot3_fake_DEVEL_PREFIX "")
-  set(turtlebot3_fake_INSTALL_PREFIX /home/yang/workspace/Slam_using_rplidar/install)
+  set(turtlebot3_fake_INSTALL_PREFIX /home/yy/workspace/Slam_using_rplidar/install)
   set(turtlebot3_fake_PREFIX ${turtlebot3_fake_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(turtlebot3_fake_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include " STREQUAL " ")
+if(NOT "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include " STREQUAL " ")
   set(turtlebot3_fake_INCLUDE_DIRS "")
-  set(_include_dirs "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include")
+  set(_include_dirs "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include")
   if(NOT "https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/turtlebot3_fake " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot
         message(FATAL_ERROR "Project 'turtlebot3_fake' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'turtlebot3_fake' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'turtlebot3_fake' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/${idir}'.  ${_report}")
     endif()
     _list_append_unique(turtlebot3_fake_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yang/workspace/Slam_using_rplidar/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/yy/workspace/Slam_using_rplidar/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(turtlebot3_fake_LIBRARIES ${turtlebot3_fake_LIBRARIES})
 
   _list_append_unique(turtlebot3_fake_LIBRARY_DIRS ${${turtlebot3_fake_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(turtlebot3_fake_EXPORTED_TARGETS ${${turtlebot3_fake_dep}_EXPORTED_TARGETS})
+  list(APPEND turtlebot3_fake_EXPORTED_TARGETS ${${turtlebot3_fake_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

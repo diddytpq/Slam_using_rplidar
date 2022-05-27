@@ -21,14 +21,14 @@
 
     <node pkg="joy" type="joy_node" name="joystick_raw"  output="screen"/>
     <node pkg="joystick_to_arduino" type="joy_to_cmd.py" name="joy_to_cmds"/>
-    <!-- <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega"/> -->
+    <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega"/>
 
     <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
   
     <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
   
     <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
-        <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+        <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
         <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
         <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
         <param name="frame_id"            type="string" value="base_scan"/>

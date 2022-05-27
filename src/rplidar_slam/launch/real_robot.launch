@@ -10,13 +10,22 @@
     <arg name="set_odom_frame" default="odom"/>
     <arg name="set_map_frame"  default="map"/>
 
+  <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" />
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+    <param name="publish_frequency" type="double" value="50.0" />
+  </node>
 
     <node pkg="joy" type="joy_node" name="joystick_raw"  output="screen"/>
     <node pkg="joystick_to_arduino" type="joy_to_cmd.py" name="joy_to_cmds"/>
-    <!-- <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega"/> -->
+    <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega"/>
 
     <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
-        <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+        <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
         <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
         <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
         <param name="frame_id"            type="string" value="base_scan"/>

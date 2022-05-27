@@ -67,14 +67,14 @@ set(turtlebot3_fake_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(turtlebot3_fake_SOURCE_PREFIX /home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake)
-  set(turtlebot3_fake_DEVEL_PREFIX /home/yang/workspace/Slam_using_rplidar/devel)
+  set(turtlebot3_fake_SOURCE_PREFIX /home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake)
+  set(turtlebot3_fake_DEVEL_PREFIX /home/yy/workspace/Slam_using_rplidar/devel)
   set(turtlebot3_fake_INSTALL_PREFIX "")
   set(turtlebot3_fake_PREFIX ${turtlebot3_fake_DEVEL_PREFIX})
 else()
   set(turtlebot3_fake_SOURCE_PREFIX "")
   set(turtlebot3_fake_DEVEL_PREFIX "")
-  set(turtlebot3_fake_INSTALL_PREFIX /home/yang/workspace/Slam_using_rplidar/install)
+  set(turtlebot3_fake_INSTALL_PREFIX /home/yy/workspace/Slam_using_rplidar/install)
   set(turtlebot3_fake_PREFIX ${turtlebot3_fake_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yang/workspace/Slam_using_rplidar/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/yy/workspace/Slam_using_rplidar/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(turtlebot3_fake_LIBRARIES ${turtlebot3_fake_LIBRARIES})
 
   _list_append_unique(turtlebot3_fake_LIBRARY_DIRS ${${turtlebot3_fake_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(turtlebot3_fake_EXPORTED_TARGETS ${${turtlebot3_fake_dep}_EXPORTED_TARGETS})
+  list(APPEND turtlebot3_fake_EXPORTED_TARGETS ${${turtlebot3_fake_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

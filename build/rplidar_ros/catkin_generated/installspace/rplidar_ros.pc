@@ -1,4 +1,4 @@
-prefix=/home/yang/workspace/Slam_using_rplidar/install
+prefix=/home/yy/workspace/Slam_using_rplidar/install
 
 Name: rplidar_ros
 Description: Description of rplidar_ros
