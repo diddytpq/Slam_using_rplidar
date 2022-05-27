@@ -4,13 +4,23 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_gazebo/src/turtlebot3_drive.cpp" "/home/yy/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o"
+  "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_gazebo/src/turtlebot3_drive.cpp" "/home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "LIBBULLET_VERSION=2.87"
+  "BOOST_ALL_NO_LIB"
+  "BOOST_ATOMIC_DYN_LINK"
+  "BOOST_DATE_TIME_DYN_LINK"
+  "BOOST_FILESYSTEM_DYN_LINK"
+  "BOOST_IOSTREAMS_DYN_LINK"
+  "BOOST_PROGRAM_OPTIONS_DYN_LINK"
+  "BOOST_REGEX_DYN_LINK"
+  "BOOST_SYSTEM_DYN_LINK"
+  "BOOST_TEST_DYN_LINK"
+  "BOOST_THREAD_DYN_LINK"
+  "LIBBULLET_VERSION=2.88"
   "LIBBULLET_VERSION_GT_282"
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
@@ -19,23 +29,25 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_gazebo/include"
-  "/opt/ros/melodic/include"
-  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/usr/include/gazebo-9"
+  "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_gazebo/include"
+  "/opt/ros/noetic/include"
+  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/usr/include/gazebo-11"
   "/usr/include/bullet"
-  "/usr/include/simbody"
-  "/usr/include/sdformat-6.0"
-  "/usr/include/ignition/math4"
+  "/usr/include/sdformat-9.7"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
   "/usr/include/OGRE/Paging"
-  "/usr/include/ignition/transport4"
-  "/usr/include/ignition/msgs1"
-  "/usr/include/ignition/common1"
-  "/usr/include/ignition/fuel_tools1"
+  "/usr/include/simbody"
+  "/usr/include/ignition/math6"
+  "/usr/include/ignition/transport8"
+  "/usr/include/ignition/msgs5"
+  "/usr/include/ignition/common3"
+  "/usr/include/ignition/fuel_tools4"
+  "/usr/include/eigen3"
+  "/usr/include/sdformat-9.7/sdf/.."
+  "/usr/include/ignition/cmake2"
   "/usr/include/uuid"
-  "/usr/include/aarch64-linux-gnu"
   )
 
 # Targets to which this target links.

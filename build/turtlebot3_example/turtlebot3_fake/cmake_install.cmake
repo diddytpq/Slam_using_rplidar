@@ -1,8 +1,8 @@
-# Install script for directory: /home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake
+# Install script for directory: /home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yy/workspace/Slam_using_rplidar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/Slam_using_rplidar/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yy/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_fake/catkin_generated/installspace/turtlebot3_fake.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_fake/catkin_generated/installspace/turtlebot3_fake.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_fake/cmake" TYPE FILE FILES
-    "/home/yy/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_fake/catkin_generated/installspace/turtlebot3_fakeConfig.cmake"
-    "/home/yy/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_fake/catkin_generated/installspace/turtlebot3_fakeConfig-version.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_fake/catkin_generated/installspace/turtlebot3_fakeConfig.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_fake/catkin_generated/installspace/turtlebot3_fakeConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_fake" TYPE FILE FILES "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_fake" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake/turtlebot3_fake_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake" TYPE EXECUTABLE FILES "/home/yy/workspace/Slam_using_rplidar/devel/lib/turtlebot3_fake/turtlebot3_fake_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake" TYPE EXECUTABLE FILES "/home/yang/workspace/Slam_using_rplidar/devel/lib/turtlebot3_fake/turtlebot3_fake_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake/turtlebot3_fake_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake/turtlebot3_fake_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake/turtlebot3_fake_node"
-         OLD_RPATH "/opt/ros/melodic/lib:"
+         OLD_RPATH "/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake/turtlebot3_fake_node")
@@ -73,13 +73,13 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/turtlebot3_fake" TYPE DIRECTORY FILES "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include/turtlebot3_fake/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/turtlebot3_fake" TYPE DIRECTORY FILES "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include/turtlebot3_fake/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_fake" TYPE DIRECTORY FILES
-    "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/launch"
-    "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/rviz"
+    "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/launch"
+    "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/rviz"
     )
 endif()
 

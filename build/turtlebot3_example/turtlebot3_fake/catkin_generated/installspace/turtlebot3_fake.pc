@@ -1,4 +1,4 @@
-prefix=/home/yy/workspace/Slam_using_rplidar/install
+prefix=/home/yang/workspace/Slam_using_rplidar/install
 
 Name: turtlebot3_fake
 Description: Description of turtlebot3_fake

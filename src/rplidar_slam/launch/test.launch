@@ -14,27 +14,15 @@
       <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/empty.world"/>
       <arg name="paused" value="false"/>
       <arg name="use_sim_time" value="true"/>
-      <arg name="gui" value="false"/>
+      <arg name="gui" value="true"/>
       <arg name="headless" value="true"/>
       <arg name="debug" value="false"/>
     </include>
-
-    <node pkg="joy" type="joy_node" name="joystick_raw"  output="screen"/>
-    <node pkg="joystick_to_arduino" type="joy_to_cmd.py" name="joy_to_cmds"/>
-    <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega"/>
 
     <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
   
     <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
   
-    <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
-        <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
-        <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
-        <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
-        <param name="frame_id"            type="string" value="base_scan"/>
-        <param name="inverted"            type="bool"   value="false"/>
-        <param name="angle_compensate"    type="bool"   value="true"/>
-    </node>
 
     <node pkg="gmapping" type="slam_gmapping" name="rplidar_slam_gmapping" output="screen">
         <param name="base_frame" value="$(arg set_base_frame)"/>
@@ -48,8 +36,8 @@
     <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
 
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
-        <param name="publish_frequency" type="double" value="50.0" />
-        <param name="tf_prefix" value=""/>
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value=""/>
     </node>
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_slam)/rviz/rplidar_slam.rviz" />

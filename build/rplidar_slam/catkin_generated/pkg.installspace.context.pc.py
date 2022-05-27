@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "rplidar_slam"
-PROJECT_SPACE_DIR = "/home/yy/workspace/Slam_using_rplidar/install"
+PROJECT_SPACE_DIR = "/home/yang/workspace/Slam_using_rplidar/install"
 PROJECT_VERSION = "0.0.0"

@@ -1,8 +1,8 @@
-# Install script for directory: /home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam
+# Install script for directory: /home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yy/workspace/Slam_using_rplidar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/Slam_using_rplidar/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yy/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_slam/catkin_generated/installspace/turtlebot3_slam.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_slam/catkin_generated/installspace/turtlebot3_slam.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_slam/cmake" TYPE FILE FILES
-    "/home/yy/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_slam/catkin_generated/installspace/turtlebot3_slamConfig.cmake"
-    "/home/yy/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_slam/catkin_generated/installspace/turtlebot3_slamConfig-version.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_slam/catkin_generated/installspace/turtlebot3_slamConfig.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_slam/catkin_generated/installspace/turtlebot3_slamConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_slam" TYPE FILE FILES "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_slam" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_slam/flat_world_imu_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_slam" TYPE EXECUTABLE FILES "/home/yy/workspace/Slam_using_rplidar/devel/lib/turtlebot3_slam/flat_world_imu_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_slam" TYPE EXECUTABLE FILES "/home/yang/workspace/Slam_using_rplidar/devel/lib/turtlebot3_slam/flat_world_imu_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_slam/flat_world_imu_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_slam/flat_world_imu_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_slam/flat_world_imu_node"
-         OLD_RPATH "/opt/ros/melodic/lib:"
+         OLD_RPATH "/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_slam/flat_world_imu_node")
@@ -73,15 +73,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/turtlebot3_slam" TYPE DIRECTORY FILES "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/include/turtlebot3_slam/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/turtlebot3_slam" TYPE DIRECTORY FILES "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/include/turtlebot3_slam/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_slam" TYPE DIRECTORY FILES
-    "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/bag"
-    "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/config"
-    "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/launch"
-    "/home/yy/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/rviz"
+    "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/bag"
+    "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/config"
+    "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/launch"
+    "/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/rviz"
     )
 endif()
 
