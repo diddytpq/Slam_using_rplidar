@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/yoseph/worckspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include/turtlebot3_fake/turtlebot3_fake.h
+/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include/turtlebot3_fake/turtlebot3_fake.h
 math.h
 -
 ros/ros.h
@@ -32,9 +32,9 @@ nav_msgs/Odometry.h
 turtlebot3_msgs/SensorState.h
 -
 turtlebot3_fake.h
-/home/yoseph/worckspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include/turtlebot3_fake/turtlebot3_fake.h
+/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/include/turtlebot3_fake/turtlebot3_fake.h
 
-/home/yoseph/worckspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/src/turtlebot3_fake.cpp
+/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_fake/src/turtlebot3_fake.cpp
 turtlebot3_fake/turtlebot3_fake.h
 -
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yoseph/worckspace/Slam_using_rplidar/src
+CMAKE_SOURCE_DIR = /home/yang/workspace/Slam_using_rplidar/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yoseph/worckspace/Slam_using_rplidar/build
+CMAKE_BINARY_DIR = /home/yang/workspace/Slam_using_rplidar/build
 
 # Utility rule file for turtlebot3_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messag
 .PHONY : turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/build
 
 turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/clean:
-	cd /home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_bringup && $(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_bringup && $(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/clean
 
 turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/depend:
-	cd /home/yoseph/worckspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yoseph/worckspace/Slam_using_rplidar/src /home/yoseph/worckspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_bringup /home/yoseph/worckspace/Slam_using_rplidar/build /home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_bringup /home/yoseph/worckspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yang/workspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/workspace/Slam_using_rplidar/src /home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_bringup /home/yang/workspace/Slam_using_rplidar/build /home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_bringup /home/yang/workspace/Slam_using_rplidar/build/turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : turtlebot3_example/turtlebot3_bringup/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yoseph/worckspace/Slam_using_rplidar/src
+CMAKE_SOURCE_DIR = /home/yang/workspace/Slam_using_rplidar/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yoseph/worckspace/Slam_using_rplidar/build
+CMAKE_BINARY_DIR = /home/yang/workspace/Slam_using_rplidar/build
 
 # Utility rule file for tf_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/build: tf_generate_messa
 .PHONY : rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/build
 
 rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/clean:
-	cd /home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_slam && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/yang/workspace/Slam_using_rplidar/build/rplidar_slam && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/clean
 
 rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/depend:
-	cd /home/yoseph/worckspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yoseph/worckspace/Slam_using_rplidar/src /home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_slam /home/yoseph/worckspace/Slam_using_rplidar/build /home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_slam /home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yang/workspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/workspace/Slam_using_rplidar/src /home/yang/workspace/Slam_using_rplidar/src/rplidar_slam /home/yang/workspace/Slam_using_rplidar/build /home/yang/workspace/Slam_using_rplidar/build/rplidar_slam /home/yang/workspace/Slam_using_rplidar/build/rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rplidar_slam/CMakeFiles/tf_generate_messages_nodejs.dir/depend
 

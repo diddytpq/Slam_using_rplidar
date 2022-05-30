@@ -1,8 +1,8 @@
-# Install script for directory: /home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_slam
+# Install script for directory: /home/yang/workspace/Slam_using_rplidar/src/rplidar_slam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yoseph/worckspace/Slam_using_rplidar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/Slam_using_rplidar/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_slam/catkin_generated/installspace/rplidar_slam.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/build/rplidar_slam/catkin_generated/installspace/rplidar_slam.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_slam/cmake" TYPE FILE FILES
-    "/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_slam/catkin_generated/installspace/rplidar_slamConfig.cmake"
-    "/home/yoseph/worckspace/Slam_using_rplidar/build/rplidar_slam/catkin_generated/installspace/rplidar_slamConfig-version.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/rplidar_slam/catkin_generated/installspace/rplidar_slamConfig.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/rplidar_slam/catkin_generated/installspace/rplidar_slamConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_slam" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_slam/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rplidar_slam" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/src/rplidar_slam/package.xml")
 endif()
 

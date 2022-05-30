@@ -1,8 +1,8 @@
-prefix=/home/yoseph/worckspace/Slam_using_rplidar/devel
+prefix=/home/yang/workspace/Slam_using_rplidar/devel
 
 Name: turtlebot3_slam
 Description: Description of turtlebot3_slam
 Version: 1.2.6
-Cflags: -I/home/yoseph/worckspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/include
+Cflags: -I/home/yang/workspace/Slam_using_rplidar/src/turtlebot3_example/turtlebot3_slam/include
 Libs: -L${prefix}/lib 
 Requires: roscpp sensor_msgs

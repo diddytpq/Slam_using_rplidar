@@ -1,8 +1,8 @@
-# Install script for directory: /home/yoseph/worckspace/Slam_using_rplidar/src/joystick_to_arduino
+# Install script for directory: /home/yang/workspace/Slam_using_rplidar/src/joystick_to_arduino
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yoseph/worckspace/Slam_using_rplidar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/Slam_using_rplidar/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino/catkin_generated/installspace/joystick_to_arduino.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino/catkin_generated/installspace/joystick_to_arduino.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joystick_to_arduino/cmake" TYPE FILE FILES
-    "/home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino/catkin_generated/installspace/joystick_to_arduinoConfig.cmake"
-    "/home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino/catkin_generated/installspace/joystick_to_arduinoConfig-version.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino/catkin_generated/installspace/joystick_to_arduinoConfig.cmake"
+    "/home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino/catkin_generated/installspace/joystick_to_arduinoConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joystick_to_arduino" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/src/joystick_to_arduino/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joystick_to_arduino" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/src/joystick_to_arduino/package.xml")
 endif()
 

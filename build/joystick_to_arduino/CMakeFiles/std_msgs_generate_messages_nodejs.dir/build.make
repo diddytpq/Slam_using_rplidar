@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yoseph/worckspace/Slam_using_rplidar/src
+CMAKE_SOURCE_DIR = /home/yang/workspace/Slam_using_rplidar/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yoseph/worckspace/Slam_using_rplidar/build
+CMAKE_BINARY_DIR = /home/yang/workspace/Slam_using_rplidar/build
 
 # Utility rule file for std_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build: std_
 .PHONY : joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 
 joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/yoseph/worckspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yoseph/worckspace/Slam_using_rplidar/src /home/yoseph/worckspace/Slam_using_rplidar/src/joystick_to_arduino /home/yoseph/worckspace/Slam_using_rplidar/build /home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino /home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yang/workspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/workspace/Slam_using_rplidar/src /home/yang/workspace/Slam_using_rplidar/src/joystick_to_arduino /home/yang/workspace/Slam_using_rplidar/build /home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino /home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : joystick_to_arduino/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 

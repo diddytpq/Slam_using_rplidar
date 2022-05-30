@@ -1,10 +1,11 @@
 # CMake generated Testfile for 
-# Source directory: /home/yoseph/worckspace/Slam_using_rplidar/src
-# Build directory: /home/yoseph/worckspace/Slam_using_rplidar/build
+# Source directory: /home/yang/workspace/Slam_using_rplidar/src
+# Build directory: /home/yang/workspace/Slam_using_rplidar/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("jetcam_socket")
 subdirs("joystick_to_arduino")
 subdirs("rplidar_ros")
 subdirs("rplidar_slam")

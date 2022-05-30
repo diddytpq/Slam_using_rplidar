@@ -1,4 +1,4 @@
-prefix=/home/yoseph/worckspace/Slam_using_rplidar/devel
+prefix=/home/yang/workspace/Slam_using_rplidar/devel
 
 Name: joystick_to_arduino
 Description: Description of joystick_to_arduino
