@@ -67,14 +67,14 @@ set(rplidar_slam_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rplidar_slam_SOURCE_PREFIX /home/yang/workspace/Slam_using_rplidar/src/rplidar_slam)
-  set(rplidar_slam_DEVEL_PREFIX /home/yang/workspace/Slam_using_rplidar/devel)
+  set(rplidar_slam_SOURCE_PREFIX /home/yoseph/worckspace/Slam_using_rplidar/src/rplidar_slam)
+  set(rplidar_slam_DEVEL_PREFIX /home/yoseph/worckspace/Slam_using_rplidar/devel)
   set(rplidar_slam_INSTALL_PREFIX "")
   set(rplidar_slam_PREFIX ${rplidar_slam_DEVEL_PREFIX})
 else()
   set(rplidar_slam_SOURCE_PREFIX "")
   set(rplidar_slam_DEVEL_PREFIX "")
-  set(rplidar_slam_INSTALL_PREFIX /home/yang/workspace/Slam_using_rplidar/install)
+  set(rplidar_slam_INSTALL_PREFIX /home/yoseph/worckspace/Slam_using_rplidar/install)
   set(rplidar_slam_PREFIX ${rplidar_slam_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yang/workspace/Slam_using_rplidar/install/lib;/home/yang/workspace/Slam_using_rplidar/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/yoseph/worckspace/Slam_using_rplidar/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

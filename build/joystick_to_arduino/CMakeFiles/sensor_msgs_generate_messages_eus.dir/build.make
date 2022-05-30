@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yang/workspace/Slam_using_rplidar/src
+CMAKE_SOURCE_DIR = /home/yoseph/worckspace/Slam_using_rplidar/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yang/workspace/Slam_using_rplidar/build
+CMAKE_BINARY_DIR = /home/yoseph/worckspace/Slam_using_rplidar/build
 
 # Utility rule file for sensor_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build: sens
 .PHONY : joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 
 joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
-	cd /home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 
 joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend:
-	cd /home/yang/workspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/workspace/Slam_using_rplidar/src /home/yang/workspace/Slam_using_rplidar/src/joystick_to_arduino /home/yang/workspace/Slam_using_rplidar/build /home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino /home/yang/workspace/Slam_using_rplidar/build/joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yoseph/worckspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yoseph/worckspace/Slam_using_rplidar/src /home/yoseph/worckspace/Slam_using_rplidar/src/joystick_to_arduino /home/yoseph/worckspace/Slam_using_rplidar/build /home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino /home/yoseph/worckspace/Slam_using_rplidar/build/joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : joystick_to_arduino/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
 

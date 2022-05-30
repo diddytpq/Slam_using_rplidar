@@ -1,0 +1,46 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="model" default="waffle" doc="model type [burger, waffle, waffle_pi]"/>
+    <arg name="map_file" default="$(find rplidar_slam)/maps/map_1/map.yaml"/>
+    <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
+    <arg name="open_rviz" default="true"/>
+  
+    <arg name="init_x_robot_pose" default="0"/>
+    <arg name="init_y_robot_pose" default="0"/>
+    <arg name="init_a_robot_pose" default="0"/>
+  
+  
+    <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
+      <arg name="model" value="$(arg model)" />
+    </include>
+  
+    <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" />
+    
+    <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+        <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
+        <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
+        <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
+        <param name="frame_id"            type="string" value="base_scan"/>
+        <param name="inverted"            type="bool"   value="false"/>
+        <param name="angle_compensate"    type="bool"   value="true"/>
+    </node>
+
+    <!-- Map server -->
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+  
+    <!-- AMCL -->
+    <include file="$(find rplidar_slam)/launch/amcl.launch">
+      <arg name="initial_pose_x" value="$(arg init_x_robot_pose)"/>
+      <arg name="initial_pose_y" value="$(arg init_y_robot_pose)"/>
+      <arg name="initial_pose_a" value="$(arg init_a_robot_pose)"/>
+    </include>
+    
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+        <param name="publish_frequency" type="double" value="50.0" />
+      </node>
+  
+    <!-- rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_slam)/rviz/rplidar_localization.rviz" />
+  
+  
+  </launch>
