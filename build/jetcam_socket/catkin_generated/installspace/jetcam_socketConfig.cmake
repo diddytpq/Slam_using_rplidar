@@ -67,14 +67,14 @@ set(jetcam_socket_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(jetcam_socket_SOURCE_PREFIX /home/yang/workspace/Slam_using_rplidar/src/jetcam_socket)
-  set(jetcam_socket_DEVEL_PREFIX /home/yang/workspace/Slam_using_rplidar/devel)
+  set(jetcam_socket_SOURCE_PREFIX /home/yoseph/worckspace/Slam_using_rplidar/src/jetcam_socket)
+  set(jetcam_socket_DEVEL_PREFIX /home/yoseph/worckspace/Slam_using_rplidar/devel)
   set(jetcam_socket_INSTALL_PREFIX "")
   set(jetcam_socket_PREFIX ${jetcam_socket_DEVEL_PREFIX})
 else()
   set(jetcam_socket_SOURCE_PREFIX "")
   set(jetcam_socket_DEVEL_PREFIX "")
-  set(jetcam_socket_INSTALL_PREFIX /home/yang/workspace/Slam_using_rplidar/install)
+  set(jetcam_socket_INSTALL_PREFIX /home/yoseph/worckspace/Slam_using_rplidar/install)
   set(jetcam_socket_PREFIX ${jetcam_socket_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yang/workspace/Slam_using_rplidar/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/yoseph/worckspace/Slam_using_rplidar/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

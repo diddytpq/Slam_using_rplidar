@@ -1,4 +1,4 @@
-prefix=/home/yang/workspace/Slam_using_rplidar/install
+prefix=/home/yoseph/worckspace/Slam_using_rplidar/install
 
 Name: turtlebot3_teleop
 Description: Description of turtlebot3_teleop

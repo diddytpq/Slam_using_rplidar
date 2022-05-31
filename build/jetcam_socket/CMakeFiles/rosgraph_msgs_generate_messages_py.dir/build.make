@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yang/workspace/Slam_using_rplidar/src
+CMAKE_SOURCE_DIR = /home/yoseph/worckspace/Slam_using_rplidar/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yang/workspace/Slam_using_rplidar/build
+CMAKE_BINARY_DIR = /home/yoseph/worckspace/Slam_using_rplidar/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build: rosgraph_
 .PHONY : jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 
 jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	cd /home/yang/workspace/Slam_using_rplidar/build/jetcam_socket && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/yoseph/worckspace/Slam_using_rplidar/build/jetcam_socket && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend:
-	cd /home/yang/workspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yang/workspace/Slam_using_rplidar/src /home/yang/workspace/Slam_using_rplidar/src/jetcam_socket /home/yang/workspace/Slam_using_rplidar/build /home/yang/workspace/Slam_using_rplidar/build/jetcam_socket /home/yang/workspace/Slam_using_rplidar/build/jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yoseph/worckspace/Slam_using_rplidar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yoseph/worckspace/Slam_using_rplidar/src /home/yoseph/worckspace/Slam_using_rplidar/src/jetcam_socket /home/yoseph/worckspace/Slam_using_rplidar/build /home/yoseph/worckspace/Slam_using_rplidar/build/jetcam_socket /home/yoseph/worckspace/Slam_using_rplidar/build/jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : jetcam_socket/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 

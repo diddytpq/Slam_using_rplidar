@@ -1,8 +1,8 @@
-# Install script for directory: /home/yang/workspace/Slam_using_rplidar/src/jetcam_socket
+# Install script for directory: /home/yoseph/worckspace/Slam_using_rplidar/src/jetcam_socket
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yang/workspace/Slam_using_rplidar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yoseph/worckspace/Slam_using_rplidar/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/build/jetcam_socket/catkin_generated/installspace/jetcam_socket.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/build/jetcam_socket/catkin_generated/installspace/jetcam_socket.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jetcam_socket/cmake" TYPE FILE FILES
-    "/home/yang/workspace/Slam_using_rplidar/build/jetcam_socket/catkin_generated/installspace/jetcam_socketConfig.cmake"
-    "/home/yang/workspace/Slam_using_rplidar/build/jetcam_socket/catkin_generated/installspace/jetcam_socketConfig-version.cmake"
+    "/home/yoseph/worckspace/Slam_using_rplidar/build/jetcam_socket/catkin_generated/installspace/jetcam_socketConfig.cmake"
+    "/home/yoseph/worckspace/Slam_using_rplidar/build/jetcam_socket/catkin_generated/installspace/jetcam_socketConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jetcam_socket" TYPE FILE FILES "/home/yang/workspace/Slam_using_rplidar/src/jetcam_socket/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jetcam_socket" TYPE FILE FILES "/home/yoseph/worckspace/Slam_using_rplidar/src/jetcam_socket/package.xml")
 endif()
 

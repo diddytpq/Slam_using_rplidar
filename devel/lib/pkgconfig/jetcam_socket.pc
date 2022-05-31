@@ -1,4 +1,4 @@
-prefix=/home/yang/workspace/Slam_using_rplidar/devel
+prefix=/home/yoseph/worckspace/Slam_using_rplidar/devel
 
 Name: jetcam_socket
 Description: Description of jetcam_socket

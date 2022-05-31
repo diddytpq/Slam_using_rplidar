@@ -30,8 +30,6 @@ from yolov5.utils.torch_utils import select_device, time_sync
 
 from yolov5.utils.augmentations import letterbox
 
-from kalman_utils.KFilter import *
-
 import argparse
 
 parser = argparse.ArgumentParser(description = 'predict_tennis_ball_landing_point')
@@ -72,51 +70,44 @@ color = tuple([0,125,255])
 
 start_frame = 0
 
-def person_tracking(model, img, img_ori, device):
+def object_tracking(model, img, img_ori, device):
 
-        person_box_left = []
-        person_box_right = []
+    img_in = torch.from_numpy(img).to(device)
+    img_in = img_in.float()
+    img_in /= 255.0
 
-        img_in = torch.from_numpy(img).to(device)
-        img_in = img_in.float()
-        img_in /= 255.0
+    if img_in.ndimension() == 3:
+        img_in = img_in.unsqueeze(0)
+    
+    pred = model(img_in, augment=False, visualize=False)
 
-        if img_in.ndimension() == 3:
-            img_in = img_in.unsqueeze(0)
+    pred = non_max_suppression(pred, conf_thres, iou_thres, classes, agnostic_nms, max_det=max_det)
+
+    for i, det in enumerate(pred):  # detections per image
         
-        pred = model(img_in, augment=False, visualize=False)
+        im0 = img_ori.copy()
 
-        pred = non_max_suppression(pred, conf_thres, iou_thres, classes, agnostic_nms, max_det=max_det)
+        if len(det):
+            det[:, :4] = scale_coords(img_in.shape[2:], det[:, :4], im0.shape).round()
 
-        for i, det in enumerate(pred):  # detections per image
-            
-            im0 = img_ori.copy()
+            for c in det[:, -1].unique():
+                n = (det[:, -1] == c).sum()  # detections per class
+                s = f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
 
-            if len(det):
-                det[:, :4] = scale_coords(img_in.shape[2:], det[:, :4], im0.shape).round()
+            for *xyxy, conf, cls in reversed(det):
+                c = int(cls)  # integer class
 
-                for c in det[:, -1].unique():
-                    n = (det[:, -1] == c).sum()  # detections per class
-                    s = f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
+                label = names[c] #None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
 
-                for *xyxy, conf, cls in reversed(det):
-                    c = int(cls)  # integer class
+                x0, y0, x1, y1 = int(xyxy[0]), int(xyxy[1]), int(xyxy[2]), int(xyxy[3])
 
-                    label = names[c] #None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
+                x0, y0, x1, y1 = x0 - 10, y0 - 10, x1 + 10, y1 + 10
 
-                    x0, y0, x1, y1 = int(xyxy[0]), int(xyxy[1]), int(xyxy[2]), int(xyxy[3])
+                plot_one_box([x0, y0, x1, y1], im0, label=label, color=colors(c, True), line_thickness=3)
 
-                    x0, y0, x1, y1 = x0 - 10, y0 - 10, x1 + 10, y1 + 10
+    return im0
 
-                    plot_one_box([x0, y0, x1, y1], im0, label=label, color=colors(c, True), line_thickness=3)
 
-                    if y0 < (img_ori.shape[0] / 2) :
-                        person_box_left.append([x0, y0, x1, y1])
-
-                    else : 
-                        person_box_right.append([x0, y0, x1, y1])
-            
-        return im0, person_box_left, person_box_right
 
 def recvall(sock, count):
     # 바이트 문자열
@@ -129,7 +120,8 @@ def recvall(sock, count):
     return buf
 
 
-def main(input_video):
+def main():
+    #"-----------------------------------------------------------------------------"
 
     HOST = '192.168.79.16'
     PORT = 8888
@@ -149,11 +141,16 @@ def main(input_video):
     # 연결, conn에는 소켓 객체, addr은 소켓에 바인드 된 주소
     conn, addr = s.accept()
 
+    #"-----------------------------------------------------------------------------"
+    (x00,y00), (x01,y01), (x10,y10), (x11,y11) = (250, 100), (390,100), (100,350), (540, 350)
+    iou = np.array([[(x00,y00), (x01,y01), (x10,y10), (x11,y11)]],dtype=np.int32)
+
+
     if args.record:
         codec = cv2.VideoWriter_fourcc(*'X264')
         out = cv2.VideoWriter("yolo_test_video.mp4", codec, fps, (1280,720))
 
-    while 1:
+    while True:
 
         print("-----------------------------------------------------------------")
         t1 = time.time()
@@ -163,25 +160,38 @@ def main(input_video):
         data = np.fromstring(stringData, dtype='uint8')
         frame = cv2.imdecode(data, cv2.IMREAD_COLOR)
 
+        frame_k_mean_main = frame.copy()
         frame_yolo_main = frame.copy()
 
-        img, img_ori = img_preprocessing(frame_yolo_main, imgsz, stride, pt)
-        try:
-            person_tracking_img, person_box_left_list, person_box_right_list = person_tracking(model, img, img_ori, device)
 
-        except:
-            continue
+        K_mean_img = K_mean_img_preprocessing(frame_k_mean_main)
+        img, img_ori = yolo_img_preprocessing(frame_yolo_main, imgsz, stride, pt)
+
+
+        #K_means_clustering
+        object_check_flag = count_object_using_k_means(K_mean_img, iou)
+
+        #Yolo object detect
+
+        if object_check_flag > 2:
+            try:
+                object_tracking_img = object_tracking(model, img, img_ori, device)
+
+            except:
+                continue
 
         t2 = time.time()
 
         print("FPS : " , 1/(t2-t1))
        
         # cv2.imshow('person_tracking_img',cv2.resize(person_tracking_img,(800,600)))
-        cv2.imshow('person_tracking_img',person_tracking_img)
-
+        if object_tracking_img:
+            cv2.imshow('object_tracking_img',object_tracking_img)
+            
+        cv2.imshow('main_frame',frame)
 
         if args.record:
-            out.write(person_tracking_img)
+            out.write(object_tracking_img)
 
         key = cv2.waitKey(1)
 
@@ -191,4 +201,4 @@ def main(input_video):
 
 if __name__ == "__main__":
 
-    main(args.video_path)
+    main()
