@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf8 -*-
 import cv2
 import socket
@@ -6,15 +7,15 @@ import numpy as np
 ## TCP 사용
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ## server ip, port
-s.connect(('192.168.79.32',8888))
+s.connect(('172.20.10.2',8888))
  
  
 ## webcam 이미지 capture
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(2)
  
 ## 이미지 속성 변경 3 = width, 4 = height
-cam.set(3, 480);
-cam.set(4, 360);
+#cam.set(3, 480);
+#cam.set(4, 360);
  
 ## 0~100에서 90의 이미지 품질로 설정 (default = 95)
 encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
@@ -23,6 +24,8 @@ while True:
     # 비디오의 한 프레임씩 읽는다.
     # 제대로 읽으면 ret = True, 실패면 ret = False, frame에는 읽은 프레임
     ret, frame = cam.read()
+    frame = cv2.resize(frame,(640,480))
+    frame = cv2.rotate(frame, cv2.ROTATE_180)
     # cv2. imencode(ext, img [, params])
     # encode_param의 형식으로 frame을 jpg로 이미지를 인코딩한다.
     result, frame = cv2.imencode('.jpg', frame, encode_param)

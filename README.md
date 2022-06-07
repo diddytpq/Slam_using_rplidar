@@ -39,7 +39,7 @@ rosbag record -a
 
 roscore
 rosparam set /use_sim_time true
-rosbag play --clock --pause 2022-05-27-18-28-14.bag --topics /cur_vel /scan /cmd_vel
+rosbag play --clock --pause 2022-06-05-16-50-00.bag --topics /cur_vel /scan /cmd_vel
 roslaunch rplidar_slam check_ros_bag.launch 
 ```
 

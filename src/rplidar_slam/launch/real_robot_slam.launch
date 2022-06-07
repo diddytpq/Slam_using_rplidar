@@ -22,12 +22,13 @@
 
     <node pkg="joy" type="joy_node" name="joystick_raw"  output="screen"/>
     <node pkg="joystick_to_arduino" type="joy_to_cmd.py" name="joy_to_cmds"/>
-    <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega"/>
-
+    <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega">
+        <param name="~port"         type="string" value="/dev/ttyUSB1"/>
+    </node>
     <node pkg="jetcam_socket" type="client.py" name="client_jetson2main_computer"/>
 
     <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
-        <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
+        <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
         <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
         <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
         <param name="frame_id"            type="string" value="base_scan"/>

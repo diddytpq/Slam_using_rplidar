@@ -17,7 +17,7 @@
     <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" />
     
     <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
-        <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
+        <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
         <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
         <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
         <param name="frame_id"            type="string" value="base_scan"/>
@@ -34,6 +34,12 @@
       <arg name="initial_pose_y" value="$(arg init_y_robot_pose)"/>
       <arg name="initial_pose_a" value="$(arg init_a_robot_pose)"/>
     </include>
+    
+    <node pkg="joy" type="joy_node" name="joystick_raw"  output="screen"/>
+    <node pkg="joystick_to_arduino" type="joy_to_cmd.py" name="joy_to_cmds"/>
+    <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega">
+        <param name="~port"         type="string" value="/dev/ttyUSB1"/>
+    </node>
     
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
         <param name="publish_frequency" type="double" value="50.0" />

@@ -12,7 +12,7 @@ robot = Twist()
 
 def callback(data):
 	robot.linear.x = -0.20*data.axes[2]
-	robot.angular.z = data.axes[1]
+	robot.angular.z = 1. * data.axes[1]
 	pub.publish(robot)
 
 

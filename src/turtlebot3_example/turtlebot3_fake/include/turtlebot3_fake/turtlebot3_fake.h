@@ -42,7 +42,7 @@
 #define RIGHT                           1
 
 #define MAX_LINEAR_VELOCITY             0.22   // m/s
-#define MAX_ANGULAR_VELOCITY            2.84   // rad/s
+#define MAX_ANGULAR_VELOCITY            1.0   // rad/s
 #define VELOCITY_STEP                   0.01   // m/s
 #define VELOCITY_LINEAR_X               0.01   // m/s
 #define VELOCITY_ANGULAR_Z              0.1    // rad/s

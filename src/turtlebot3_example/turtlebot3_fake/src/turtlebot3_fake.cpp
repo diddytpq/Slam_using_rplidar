@@ -97,7 +97,7 @@ bool Turtlebot3Fake::init()
   odom_pub_         = nh_.advertise<nav_msgs::Odometry>("odom", 100);
 
   // initialize subscribers
-  cmd_vel_sub_  = nh_.subscribe("cmd_vel", 100,  &Turtlebot3Fake::commandVelocityCallback, this);
+  cmd_vel_sub_  = nh_.subscribe("cur_vel", 100,  &Turtlebot3Fake::commandVelocityCallback, this);
 
   prev_update_time_ = ros::Time::now();
 
@@ -245,7 +245,7 @@ int main(int argc, char* argv[])
   ros::init(argc, argv, "turtlebot3_fake_node");
   Turtlebot3Fake tb3fake;
 
-  ros::Rate loop_rate(30);
+  ros::Rate loop_rate(100);
 
   while (ros::ok())
   {

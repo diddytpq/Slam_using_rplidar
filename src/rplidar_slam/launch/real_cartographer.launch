@@ -1,0 +1,63 @@
+<launch>
+    <arg name="model" default="waffle" doc="model type [burger, waffle, waffle_pi]"/>
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_base_footprint_to_base_link" args="0 0 0 0 0 0 base_footprint base_link 100"/> -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_base_link_base_scan" args="0 0 0 0 0 0 base_link base_scan 100"/> -->
+    <arg name="x_pos" default="0.0"/>
+    <arg name="y_pos" default="0.0"/>
+    <arg name="z_pos" default="0.0"/>
+  
+    <arg name="set_base_frame" default="base_footprint"/>
+    <arg name="set_odom_frame" default="odom"/>
+    <arg name="set_map_frame"  default="map"/>
+    <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
+
+  <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" />
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+    <param name="publish_frequency" type="double" value="50.0" />
+  </node>
+
+
+    <!-- <node pkg="jetcam_socket" type="client.py" name="client_jetson2main_computer"/> -->
+
+    <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+        <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
+        <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
+        <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
+        <param name="frame_id"            type="string" value="base_scan"/>
+        <param name="inverted"            type="bool"   value="false"/>
+        <param name="angle_compensate"    type="bool"   value="true"/>
+    </node>
+
+  <node pkg="cartographer_ros" type="cartographer_node" name="cartographer_node" 
+        args="-configuration_directory $(find turtlebot3_slam)/config
+              -configuration_basename $(arg configuration_basename)"
+        output="screen">
+    <remap from="/imu" to="/flat_imu"/>
+  </node>
+
+  <node pkg="cartographer_ros" type="cartographer_occupancy_grid_node"
+        name="cartographer_occupancy_grid_node" 
+        args="-resolution 0.05" />
+
+  <!-- flat_world_imu_node -->
+  <node pkg="turtlebot3_slam" type="flat_world_imu_node" name="flat_world_imu_node" output="screen">
+    <remap from="imu_in" to="/imu" />
+    <remap from="imu_out" to="/flat_imu" />
+  </node>
+
+    <node pkg="joy" type="joy_node" name="joystick_raw"  output="screen"/>
+    <node pkg="joystick_to_arduino" type="joy_to_cmd.py" name="joy_to_cmds"/>
+    <node pkg="rosserial_arduino" type="serial_node.py" name="Arduino_Mega">
+        <param name="~port"         type="string" value="/dev/ttyUSB0"/>
+    </node>
+
+    <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_slam)/rviz/rplidar_slam.rviz" />
+</launch>

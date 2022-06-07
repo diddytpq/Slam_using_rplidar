@@ -61,9 +61,9 @@ def K_mean_img_preprocessing(img0):
 
     return img
 
-def count_object_using_k_means(img0, iou):
+def count_object_using_k_means(img0, img_ori, iou):
 
-    mask=np.zeros_like(segment_img)  
+    mask=np.zeros_like(img_ori)  
 
 
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 5, 1.0)
@@ -72,13 +72,39 @@ def count_object_using_k_means(img0, iou):
     center = np.uint8(center)
     # test_0 = frame_main[label==0]
     res = center[label.flatten()]
-    segment_img = res.reshape((img0.shape))
+    segment_img = res.reshape((img_ori.shape))
 
     mask_img = cv2.fillPoly(mask,iou,(255,255,255))
     bg_removed_img = np.where((mask_img), segment_img,(0))
     segment_img_iou = cv2.cvtColor(bg_removed_img, cv2.COLOR_BGR2GRAY)
-
     # NO object == 2, detect other object > 2
     object_cnt = len(set(segment_img_iou.flatten().tolist()))
 
-    return object_cnt
+    return object_cnt, bg_removed_img, segment_img_iou
+
+
+def edge_detect(img_ori, iou):
+
+    mask=np.zeros_like(img_ori)  
+
+
+    mask_img = cv2.fillPoly(mask,iou,(255,255,255))
+
+    blur = cv2.GaussianBlur(img_ori, (3, 3), 0)
+
+    bg_removed_img = np.where((mask_img), img_ori,(0))
+
+
+    edge_img = cv2.Canny(bg_removed_img, 170, 200)
+
+    # fgmask_erode = cv2.erode(edge_img, kernel_erosion_1, iterations = 1) 
+    fgmask_dila_1 = cv2.dilate(edge_img, kernel_dilation_2,iterations = 1)
+    
+    nlabels, labels, stats_after, centroids = cv2.connectedComponentsWithStats(fgmask_dila_1, connectivity = 8)
+
+    object_cnt = nlabels
+
+    edge_img = cv2.cvtColor(fgmask_dila_1, cv2.COLOR_GRAY2BGR)
+    
+
+    return object_cnt, edge_img
